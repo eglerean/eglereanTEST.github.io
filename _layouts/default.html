@@ -14,21 +14,16 @@
   <body>
     <div class="wrapper">
       <header>
-        
-<h1>Enrico Glerean <span style="font-size:18px;">(PhD - D.Tech)</span></h1>
-<p class="view">
-Post-doctoral researcher <a href="http://emotion.nbe.aalto.fi/">Human Emotion Systems Lab</a>, <a href="http://www.becs.aalto.fi/bml/">Brain &amp; Mind Laboratory</a><br>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
 
+        {% if site.github.is_project_page %}
+          <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ github_name }}</small></a></p>
+        {% endif %}
 
-
-
-<a href="http://www.nbe.aalto.fi/">Department of Neuroscience and Biomedical Engineering </a> <br>
-<a href="http://sci.aalto.fi/en/">Aalto University School of Science</a><br>
-P.O. Box 12200; FI-00076 AALTO, FINLAND<br>
-<a href="http://maps.google.com/maps?q=Rakentajanaukio+2+C,+FI-02150+Espoo&amp;t=m&amp;z=15&amp;vpsrc=0">Room F326, Rakentajanaukio 2 C, FI-02150 Espoo</a><br>
-email: enrico.glerean <i>[at]</i> aalto.fi<br>
-
-	</p>
+        {% if site.github.is_user_page %}
+          <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %}
 
         {% if site.show_downloads %}
           <ul>
